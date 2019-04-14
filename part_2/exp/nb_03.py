@@ -1,5 +1,6 @@
 from exp.nb_02 import *
 import torch.nn.functional as F
+from torch.utils.data import DataLoader, SequentialSampler, RandomSampler
 
 def accuracy(out, yb): return (torch.argmax(out, dim=1)==yb).float().mean()
 
