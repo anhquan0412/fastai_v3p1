@@ -27,7 +27,7 @@ class Learner():
     def remove_cbs(self, cbs):
         for cb in listify(cbs): self.cbs.remove(cb)
             
-    def one_batch(self, i, xb, yb): # add i parameter to save self.iter (will be used later???)
+    def one_batch(self, i, xb, yb): # add i parameter to save self.iter (for progress bar)
         try:
             self.iter = i
             self.xb,self.yb = xb,yb;                        self('begin_batch')
